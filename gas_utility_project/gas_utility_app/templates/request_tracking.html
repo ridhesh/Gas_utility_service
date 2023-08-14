@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+     .centered-content {
+      text-align: center;
+      margin-top: 20px; 
+    }
+    table {
+      border-collapse: collapse;
+      margin: 0 auto;
+    }
+    
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+      padding: 8px 15px;
+      border: 1px solid #ccc;
+    }
+    
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
+  <div class="centered-content">
+    <h2>Request Tracking</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Customer Name</th>
+          <th>Service Type</th>
+          <th>Submission Date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for request in service_requests %}
+          <tr>
+            <td>{{ request.customer_name }}</td>
+            <td>{{ request.service_type }}</td>
+            <td>{{ request.submission_date }}</td>
+            <td>{{ request.status }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+ 
+{% endblock %}

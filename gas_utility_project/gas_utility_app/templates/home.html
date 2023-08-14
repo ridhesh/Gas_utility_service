@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gas Utility App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            padding: 20px;
+        }
+
+        a {
+            display: block;
+            text-align: center;
+            margin: 10px;
+            color: #007bff;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Gas Utility App</h1>
+    
+    <a href="{% url 'submit_request' %}">Submit Service Request</a>
+    <a href="{% url 'request_tracking' %}">Request Tracking</a>
+</body>
+</html>
